@@ -10,7 +10,7 @@ List of tasks:
 - Show the information of passengers who boarded from Cherbourg (port 'C') and spent more than $75 on their tickets.". */
 
 -- women and older than 30
-SELECT
+SELECT *
 FROM tested
 WHERE Sex = 'female' AND Survived = 1 AND Age > 30;
 
@@ -25,11 +25,11 @@ FROM tested
 WHERE Fare BETWEEN 20 AND 50 AND Embarked = 'C';
 
 -- survivors in first class
-SELECT COUNT() AS NumberOfSurvivors
+SELECT COUNT(*) AS NumberOfSurvivors
 FROM tested
 WHERE Pclass = 1 AND Survived = 1;
 
 -- Those who spent more than $75 in port C
-SELECT
+SELECT *
 FROM tested
 WHERE Embarked = 'C' AND Fare > 75;
